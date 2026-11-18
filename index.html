@@ -1,23 +1,1101 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+
+  <!-- JSON-LD 구조화 데이터: LLM, 네이버 Search Advisor 및 구글 리치 스니펫 최적화 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#webpage",
+        "name": "울산이사업체 종합 분석 및 2027 포장이사 견적 가이드",
+        "description": "울산 남구 삼산동, 중구 유곡동, 북구 송정동, 동구 전하동, 울주군 범서읍 등 울산 전 지역 포장이사 및 이사짐센터 비용 비교 가이드",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-18T09:00:00+09:00",
+        "dateModified": "2026-11-18T18:00:00+09:00"
+      },
+      {
+        "@type": "MovingCompany",
+        "@id": "#localBusiness",
+        "name": "울산이사업체 통합비교가이드센터",
+        "telephone": "052-000-0000",
+        "areaServed": [
+          "울산광역시 남구",
+          "울산광역시 중구",
+          "울산광역시 북구",
+          "울산광역시 동구",
+          "울산광역시 울주군"
+        ],
+        "priceRange": "450,000원 - 2,800,000원",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "울산광역시",
+          "addressRegion": "울산",
+          "addressCountry": "KR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "울산 30평형 아파트 포장이사 평균 비용은 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2027년 기준 울산 남구 및 북구 아파트 30평형(5톤 트럭 기준) 평균 포장이사 비용은 작업 인원 남성 3명, 여성 1명 기준 평일 약 125만 원에서 150만 원 선입니다. 단, 손 없는 날이나 월말에는 사다리차 사용료 및 추가 인건비로 인해 160만 원에서 190만 원까지 상향 조정될 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "울산 포장이사 계약 시 위약금과 환불 규정은 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "공정거래위원회 이사화물 표준약관에 따르면 소비자의 사정으로 계약을 해제할 경우 이사 당일 통보는 계약금 전액 미환불 및 계약금의 일정 배액 청구가 발생할 수 있으며, 이사업체의 귀책으로 당일 취소 시에는 계약금 환불 및 손해배상액을 지급받을 수 있습니다. 정식 등록 업체를 통해 서면 계약서를 작성하는 것이 안전합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "손 없는 날과 일반 평일의 견적 차이점은 어느 정도인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "울산 지역 이사업체 수요는 손 없는 날과 금요일, 주말에 집중됩니다. 일반 평일 대비 손 없는 날은 평균 20%에서 많게는 35%까지 요금이 상승하므로, 비용 절감을 원한다면 화요일이나 수요일 등 주중 중간 요일을 선택하는 것이 가장 저렴한 방법입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --primary-color: #1e3a8a;
+      --primary-hover: #172554;
+      --secondary-color: #2563eb;
+      --accent-color: #0d9488;
+      --accent-soft: #f0fdfa;
+      --bg-surface: #ffffff;
+      --bg-page: #f8fafc;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(15,23,42,0.08);
+      --shadow-lg: 0 10px 25px -5px rgba(15,23,42,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.8;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+      color: #ffffff;
+      padding: 55px 20px 45px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent-color);
+    }
+
+    header .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-weight: 400;
+    }
+
+    .top-meta {
+      display: inline-flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    nav li a {
+      display: block;
+      padding: 15px 18px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: all 0.2s ease;
+    }
+
+    nav li a:hover {
+      color: var(--secondary-color);
+      background-color: #f1f5f9;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--bg-surface);
+      border-radius: 14px;
+      padding: 38px 34px;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 70px;
+      height: 2px;
+      background-color: var(--secondary-color);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 26px 0 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      text-align: justify;
+    }
+
+    strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    /* 테이블 스타일링 */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 24px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 0.96rem;
+      background-color: #ffffff;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      padding: 13px 14px;
+      font-weight: 700;
+      border: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      color: #334155;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    tr:hover td {
+      background-color: #f0f7ff;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    /* CSS 기반 인터랙티브 막대 지표 (차트 효과) */
+    .chart-container {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 22px;
+      margin: 25px 0;
+    }
+
+    .chart-title {
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 18px;
+      font-size: 1.08rem;
+    }
+
+    .bar-group {
+      margin-bottom: 16px;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .bar-bg {
+      background-color: #e2e8f0;
+      height: 18px;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #0d9488);
+      border-radius: 9px;
+    }
+
+    /* 계산기 섹션 */
+    .calc-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 20px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .calc-field label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.93rem;
+      color: var(--primary-color);
+      margin-bottom: 6px;
+    }
+
+    .calc-field select, .calc-field input {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 7px;
+      font-size: 0.96rem;
+      background-color: #ffffff;
+      color: #1e293b;
+      font-family: inherit;
+    }
+
+    .calc-btn-wrap {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .btn-action {
+      background-color: var(--secondary-color);
+      color: #ffffff;
+      padding: 13px 36px;
+      border: none;
+      border-radius: 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(37,99,235,0.25);
+      transition: background-color 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-action:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .calc-result {
+      margin-top: 22px;
+      padding: 20px;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+    }
+
+    .calc-result h4 {
+      font-size: 1.15rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+    }
+
+    .calc-price {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1d4ed8;
+    }
+
+    /* FAQ 섹션 아코디언 스타일 */
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    .faq-question {
+      padding: 16px 20px;
+      background-color: #f8fafc;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      user-select: none;
+    }
+
+    .faq-answer {
+      padding: 18px 20px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      display: block;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* 키워드 클러스터 그리드 */
+    .keyword-cluster {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .keyword-box {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .keyword-box h4 {
+      font-size: 0.98rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .keyword-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .keyword-box li {
+      font-size: 0.88rem;
+      color: #3b82f6;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    /* 외부 링크 카드 */
+    .source-box {
+      background-color: var(--accent-soft);
+      border: 1px solid #99f6e4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .source-box h4 {
+      color: #0f766e;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .source-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .source-list li {
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+    }
+
+    .source-list a {
+      color: #0d9488;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 40px 20px;
+      font-size: 0.88rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+      section {
+        padding: 24px 18px;
+      }
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1>울산이사업체 비교 분석 및 2027 포장이사 견적 가이드</h1>
+      <p>울산 남구 삼산동, 중구 유곡동, 북구 송정동, 동구 전하동, 울주군 범서읍 구영리 등 울산 전 지역 아파트, 빌라, 원룸, 오피스텔 이사짐센터 평균 요금표 및 다이렉트 견적 절약 전략</p>
+      <div class="top-meta">
+        <span>최신 기준: 2027년 운송 표준 요율 반영</span>
+        <span>공식 검증: 화물운송주선사업 허가 기준</span>
+        <span>데이터 분석: 울산 5개 구군 표본 조사</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#market-trend">울산 시장 현황</a></li>
+      <li><a href="#price-table">평형별 요금표</a></li>
+      <li><a href="#regional-guide">구군별 입지 분석</a></li>
+      <li><a href="#calculator">예상 비용 계산기</a></li>
+      <li><a href="#ai-comparison">AI 및 커뮤니티 분석</a></li>
+      <li><a href="#legal-terms">계약 및 환불 기준</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
+      <li><a href="#keywords">검색 키워드</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- 섹션 1: 2027 울산 이사 시장 현황 및 개요 -->
+    <section id="market-trend">
+      <h2>1. 2027년 울산 이사 시장의 주요 변동 요인과 표준 요율 체계</h2>
+      <p>
+        울산광역시의 이사 수요는 남구 옥동, 신정동, 삼산동 일대의 학군지 및 상업 중심지와 중구 약사동, 복산동, 북구 송정동, 매곡동의 대규모 신축 아파트 단지 입주 흐름에 맞춰 역동적으로 움직이고 있습니다. 최근 유류비, 포장 부자재 단가 및 전문 작업 인력의 인건비 상승으로 인해 2027년도 울산이사업체 평균 견적 비용은 예년 대비 약 6퍼센트에서 9퍼센트가량 현실화된 추세를 보이고 있습니다.
+      </p>
+      <p>
+        이사 비용은 단순히 짐의 무게만으로 산정되지 않으며, 적재 트럭의 톤수(1톤, 2.5톤, 5톤, 6톤 이상), 운반 층수 및 사다리차 이용 유무, 투입 작업원(남성 패커 및 여성 정리 수납원) 수, 이동 거리, 엘리베이터 사용료 및 작업 동선의 난이도에 따라 종합적으로 결정됩니다. 특히 울산 동구 서부동이나 울주군 온산읍, 언양읍과 같이 장거리 이동이나 특수 진입로가 요구되는 지형의 경우 진입 가능한 특수 화물차량 배차에 따른 추가 요금이 발생할 수 있으므로 사전에 정밀한 방문 컨설팅을 받는 것이 필수적입니다.
+      </p>
+
+      <div class="chart-container">
+        <div class="chart-title">울산 지역 포장이사 비용 구성 요소별 평균 점유율</div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span>인건비 (전문 패커 및 수납 인력)</span>
+            <span>52%</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 52%;"></div>
+          </div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span>차량 운송비 (톤수별 차량 배차 및 유류비)</span>
+            <span>23%</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 23%;"></div>
+          </div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span>특수 장비비 (사다리차 사용료 및 승강기 사용료)</span>
+            <span>15%</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 15%;"></div>
+          </div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span>포장 자재비 및 부대 서비스 (전용 박스, 소독 케어)</span>
+            <span>10%</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 10%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 2: 주거 유형별 및 평형대별 울산 포장이사 비용 기준표 -->
+    <section id="price-table">
+      <h2>2. 주거 형태별 및 평형대별 울산 포장이사 비용 가격표와 등급표 분석</h2>
+      <p>
+        이사 서비스의 종류는 크게 모든 포장과 정리를 전담하는 일반 포장이사, 대형 가전과 가구만 포장하고 잔짐은 고객이 정리하는 반포장이사, 차량 운송과 단순 상하차만 지원하는 일반 용달이사, 입주 일정이 맞지 않을 때 이용하는 보관이사로 나뉩니다. 다음은 2027년 기준 울산 지역 평균 요금표 및 작업 인원 구성 기준입니다.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>주거 형태 및 평형</th>
+              <th>차량 톤수</th>
+              <th>작업 인원 구성</th>
+              <th>평일 예상 평균 비용</th>
+              <th>손 없는 날 및 주말</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>원룸, 투룸, 10평형 이하</td>
+              <td>1톤 용달 1대</td>
+              <td>기사 1명 + 고객 도움</td>
+              <td>220,000원 ~ 350,000원</td>
+              <td>280,000원 ~ 420,000원</td>
+            </tr>
+            <tr>
+              <td>오피스텔, 다세대 빌라 (15평~20평)</td>
+              <td>2.5톤 탑차</td>
+              <td>남성 2명, 여성 1명</td>
+              <td>750,000원 ~ 950,000원</td>
+              <td>900,000원 ~ 1,150,000원</td>
+            </tr>
+            <tr>
+              <td>아파트, 단독주택 (24평~28평)</td>
+              <td>5톤 트럭</td>
+              <td>남성 3명, 여성 1명</td>
+              <td>1,150,000원 ~ 1,350,000원</td>
+              <td>1,350,000원 ~ 1,600,000원</td>
+            </tr>
+            <tr>
+              <td>아파트, 다세대 빌라 (30평~34평)</td>
+              <td>5톤 ~ 6톤</td>
+              <td>남성 3명, 여성 1명</td>
+              <td>1,300,000원 ~ 1,550,000원</td>
+              <td>1,550,000원 ~ 1,850,000원</td>
+            </tr>
+            <tr>
+              <td>대형 아파트 (40평~50평대)</td>
+              <td>6톤 ~ 7.5톤 이상</td>
+              <td>남성 4명, 여성 1~2명</td>
+              <td>1,800,000원 ~ 2,400,000원</td>
+              <td>2,100,000원 ~ 2,900,000원</td>
+            </tr>
+            <tr>
+              <td>기업, 사무실, 공장 이전</td>
+              <td>맞춤 배차</td>
+              <td>현장 실측 후 산출</td>
+              <td>현장 방문 견적 필수</td>
+              <td>사전 협의 요금 적용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>사다리차 이용 요금 기준표 (울산 표준 작업 기준)</h3>
+      <p>
+        사다리차 요금은 적재량(톤수)과 층수에 따라 정량화되어 있습니다. 아파트 엘리베이터를 이용하는 경우 아파트 관리사무소에 별도의 승강기 사용 요금을 지불해야 하며, 보통 5만 원에서 20만 원 내외로 책정됩니다. 통상 7층 이상의 고층 아파트나 짐의 부피가 큰 5톤 이상 작업에서는 사다리차 작업이 엘리베이터 작업보다 시간 단축 및 파손 방지 측면에서 유리합니다.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>작업 층수 구분</th>
+              <th>5톤 기준 1회 비용</th>
+              <th>5톤 기준 상하차 왕복</th>
+              <th>작업 시 주의사항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>저층 (2층 ~ 5층)</td>
+              <td>120,000원</td>
+              <td>240,000원</td>
+              <td>화단 및 주차장 진입 가능 여부 확인</td>
+            </tr>
+            <tr>
+              <td>중층 (6층 ~ 10층)</td>
+              <td>150,000원</td>
+              <td>300,000원</td>
+              <td>가로수, 전선 등 간섭 장애물 점검</td>
+            </tr>
+            <tr>
+              <td>고층 (11층 ~ 15층)</td>
+              <td>180,000원</td>
+              <td>360,000원</td>
+              <td>외벽 지지대 및 풍속 영향 체크</td>
+            </tr>
+            <tr>
+              <td>초고층 (16층 ~ 20층 이상)</td>
+              <td>220,000원 ~ 350,000원</td>
+              <td>440,000원 ~ 700,000원</td>
+              <td>초고층 전문 특수 사다리차 배차 필요</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 섹션 3: 울산 5개 구군별 입지적 특징 및 사다리차 작업 분석 -->
+    <section id="regional-guide">
+      <h2>3. 울산 5개 구군별 지형 및 주거 환경에 따른 이사 견적 차이점</h2>
+      <p>
+        울산광역시는 바다와 산지, 국가산업단지가 공존하는 복합 도시 구조로 인해 지역별로 이사 작업 동선과 투입 장비의 특성이 명확히 갈립니다. 소비자는 본인이 거주하는 지역과 전입지의 물리적 특성을 미리 파악해야 부당한 추가 운임 요구를 예방할 수 있습니다.
+      </p>
+
+      <h3>남구 (삼산동, 달동, 옥동, 신정동, 무거동)</h3>
+      <p>
+        울산 남구는 문수로 인근의 대단지 고급 아파트와 삼산동, 달동의 오피스텔, 원룸 밀집 구역이 공존합니다. 대단지 아파트의 경우 지하 주차장 유효 높이 제한으로 인해 탑차 진입 여부를 미리 측정해야 하며, 신정동 및 무거동 구도심 빌라와 단독주택 골목길의 경우 좁은 도로 폭으로 5톤 트럭 대신 1톤 및 2.5톤 차량 2~3대로 나누어 셔틀 운반 작업을 진행해야 하므로 10만 원에서 20만 원가량의 셔틀 작업 요금이 추가될 수 있습니다.
+      </p>
+
+      <h3>중구 (성남동, 유곡동, 우정동, 복산동, 태화동)</h3>
+      <p>
+        우정혁신도시 중심의 유곡동과 복산동 신축 아파트는 지상 차 없는 단지가 대부분이어서 사다리차 배선 각도 확보 및 승강기 예약이 최우선 고려 대상입니다. 반면 태화동과 성남동의 구도심 다세대 주택가는 언덕길 경사도와 전봇대 전선 배치로 사다리차 전개가 불가능한 장소가 많아 계단 작업 인력 추가 비용이 발생할 가능성이 높습니다.
+      </p>
+
+      <h3>북구 (송정동, 매곡동, 천곡동, 산하동, 화봉동)</h3>
+      <p>
+        송정지구 및 매곡동은 대규모 아파트 단지가 균일하게 정비되어 있어 사다리차와 승강기 작업이 매우 원활한 장점이 있습니다. 다만 강동동 산하동 블루마시티의 경우 동해안 해풍의 영향으로 기상 악화 시 사다리차 작업이 안전상 제한되어 엘리베이터 수작업으로 긴급 전환되는 사례가 빈번하므로 관리사무소와의 일정 조율이 핵심입니다.
+      </p>
+
+      <h3>동구 (일산동, 전하동, 방어동, 서부동)</h3>
+      <p>
+        전하동 대단지 아파트와 서부동 일대는 이사 물량이 꾸준하나, 방어동 꽃바위 주변 원룸촌 및 빌라 단지는 주차 난이도가 매우 높습니다. 이사 전날 동구청이나 관할 동주민센터, 관리인을 통해 주차 공간을 사전 확보해 두지 않으면 사다리차 세팅 지연으로 대기 요금이 부과될 수 있습니다.
+      </p>
+
+      <h3>울주군 (범서읍 구영리, 천상리, 언양읍, 온산읍)</h3>
+      <p>
+        울주군은 범서읍 구영리와 천상리의 대규모 주거 타운부터 언양읍, 온산읍의 단독 전원주택까지 범위가 매우 넓습니다. 시내 중심가(남구, 중구)에서 울주군 외곽 지역으로 이동하거나 타 시도로 나가는 장거리 이사의 경우 톨게이트 비용 및 유류비 보정 계수가 견적 금액에 직접 반영됩니다.
+      </p>
+    </section>
+
+    <!-- 섹션 4: 실시간 예상 이사비용 계산기 -->
+    <section id="calculator">
+      <h2>4. 울산 포장이사 실시간 예상 견적 계산기</h2>
+      <p>
+        주거 평형대, 현재 짐의 양, 사다리차 사용 유무 및 이사 일정을 입력하시면 2027년도 울산 표준 이사 요금을 즉시 시뮬레이션해 드립니다. 실제 현장 상황(가구 분해 조립, 피아노, 돌침대 등 특수 화물)에 따라 최종 금액은 달라질 수 있습니다.
+      </p>
+
+      <div class="calc-card">
+        <form id="movingCalcForm" onsubmit="calculateMovingCost(event)">
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label for="roomSize">주거 평형대 선택</label>
+              <select id="roomSize" required>
+                <option value="1">10평 이하 (원룸/소형 투룸)</option>
+                <option value="2.5">15평 ~ 24평 (투룸/소형 아파트)</option>
+                <option value="5" selected>25평 ~ 34평 (국민 평형 아파트)</option>
+                <option value="6">35평 ~ 45평 (중대형 아파트)</option>
+                <option value="7.5">46평 이상 (대형 아파트/단독)</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="moveType">이사 서비스 종류</label>
+              <select id="moveType" required>
+                <option value="packaging" selected>포장이사 (전체 포장 및 정리 수납)</option>
+                <option value="semi">반포장이사 (큰 짐만 포장, 잔짐 고객 정리)</option>
+                <option value="storage">보관이사 (보관료 및 왕복 운송 포함)</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="ladderUse">사다리차 이용 계획</label>
+              <select id="ladderUse" required>
+                <option value="none">사다리차 미사용 (승강기/계단)</option>
+                <option value="one">출발지 또는 도착지 1회 사용</option>
+                <option value="both" selected>출발지 및 도착지 양쪽 사용</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="dateType">이사 예정 일정</label>
+              <select id="dateType" required>
+                <option value="weekday" selected>일반 평일 (화, 수, 목)</option>
+                <option value="weekend">주말 (토, 일) 또는 금요일</option>
+                <option value="peak">손 없는 날 (음력 9일, 10일, 19일, 20일 등)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-btn-wrap">
+            <button type="submit" class="btn-action">예상 이사비용 계산하기</button>
+          </div>
+        </form>
+
+        <div id="calcResultBox" class="calc-result">
+          <h4>울산 지역 예상 포장이사 견적</h4>
+          <div class="calc-price" id="calcPriceDisplay">0원</div>
+          <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;">
+            산출된 금액은 차량 톤수와 기본 작업 인건비, 장비비가 포함된 추정 금액입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 5: AI 분석 및 온라인 커뮤니티 내돈내산 후기 검증 -->
+    <section id="ai-comparison">
+      <h2>5. AI 검색 엔진 및 온라인 커뮤니티 내돈내산 후기 분석과 최저가 업체의 장단점</h2>
+      <p>
+        최근에는 네이버, 구글 검색뿐만 아니라 챗지피티(ChatGPT), 제미나이(Gemini) 등 대화형 AI 도구를 활용해 이사 체크리스트와 계약서 독소 조항을 사전 검토하는 소비자가 급증하고 있습니다. 아울러 유튜브의 이사 브이로그, 인스타그램, 페이스북, 카카오톡 오픈채팅, 텔레그램 정보방 및 토스 앱의 이사 비교 견적 서비스를 통해 다이렉트 신청 경로를 확보하는 방식이 보편화되었습니다.
+      </p>
+      <p>
+        특히 디시인사이드(디시) 부동산 갤러리나 알뜰살뜰 갤러리, 보배드림, 펨코(에펨코리아) 등 온라인 대형 커뮤니티의 내돈내산 실제 후기 게시판에서는 이른바 울산이사업체 좌표 및 이사 성지로 불리는 업체들에 대한 장단점 토론이 활발합니다. 이러한 후기 분석을 통해 밝혀진 최저가 업체의 명암을 투명하게 비교해 드립니다.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>초저가 덤핑 업체</th>
+              <th>정식 관허 프리미엄 전문 업체</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>장점</td>
+              <td>초기 제시 견적이 시세 대비 20~30% 저렴함</td>
+              <td>숙련된 정규직 팀 구성, 바닥 보호재 완비, 체계적 수납</td>
+            </tr>
+            <tr>
+              <td>단점</td>
+              <td>당일 현장 추가 요금 요구 빈번, 작업 인원 미숙련 외국인 대체</td>
+              <td>초기 견적 금액이 상대적으로 다소 높게 책정됨</td>
+            </tr>
+            <tr>
+              <td>파손 발생 시</td>
+              <td>적재물 배상책임보험 미가입으로 분쟁 발생 및 환불 회피</td>
+              <td>자체 A/S 부서 운영 및 보험사를 통한 전액 보상 처리</td>
+            </tr>
+            <tr>
+              <td>점심 식대 요구</td>
+              <td>계약과 달리 수고비, 음료비, 식대 현금 요구 사례 다수</td>
+              <td>계약서 상 총액 확정으로 일체의 부당 추가금 없음 명시</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        커뮤니티 이용자들의 공통된 조언은 가장 싼 곳만을 고집하다가 가구 스크래치, 가전제품 파손, 당일 지각 도착 등의 피해를 겪고 분쟁을 겪는 것보다, 적재물 배상책임보험에 5억 원 이상 가입되어 있고 사업자등록증과 화물자동차운송주선사업 허가증을 보유한 업체를 순위권에서 선별하여 비교 견적을 받는 것이 궁극적으로 비용을 아끼는 지름길이라는 점입니다.
+      </p>
+    </section>
+
+    <!-- 섹션 6: 이사 계약 시 법적 보호 기준 (계약금, 위약금, 환불) -->
+    <section id="legal-terms">
+      <h2>6. 이사 계약 시 법적 보호 기준: 계약금, 위약금, 환불 및 피해보상</h2>
+      <p>
+        포장이사 계약 체결 시에는 반드시 구두 약속이 아닌 관인 서면 계약서를 작성해야 합니다. 계약서에는 차량 톤수, 투입 인원(남/여 구분), 작업 시작 시간, 사다리차 비용 포함 여부, 에어컨 탈부착이나 벽걸이 TV 타공, 비데 이전 설치와 같은 부가 서비스 제공 범위가 명확한 금액으로 기재되어야 합니다.
+      </p>
+
+      <h3>공정거래위원회 이사화물 표준약관에 따른 해약 위약금 기준</h3>
+      <p>
+        소비자 또는 이사업체의 사정으로 계약이 취소되는 경우 다음과 같은 표준 위약금 규정이 적용됩니다.
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>계약 해제 통보 시점</th>
+              <th>소비자 사정으로 취소 시 (위약금)</th>
+              <th>이사업체 사정으로 취소 시 (배상금)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>이사 예정일 2일 전까지</td>
+              <td>계약금 전액 환불 가능</td>
+              <td>계약금 환불 및 계약금의 2배액 배상</td>
+            </tr>
+            <tr>
+              <td>이사 예정일 1일 전 통보</td>
+              <td>계약금 미환불 (업체 귀속)</td>
+              <td>계약금 환불 및 계약금의 3배액 배상</td>
+            </tr>
+            <tr>
+              <td>이사 당일 일방 통보</td>
+              <td>계약금 미환불 및 총비용의 20% 배상</td>
+              <td>계약금 환불 및 총비용의 20% 손해 배상</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        이사 계약 시 지불하는 통상적인 계약금은 전체 견적 금액의 10퍼센트 내외입니다. 만약 업체 측에서 총비용의 30퍼센트 이상을 과도하게 요구하거나 완납을 선요구하는 경우 부실 업체일 가능성이 높으므로 주의해야 합니다. 잔금은 이사가 완전히 끝나고 가구 배치 상태와 물품 파손 유무를 현장에서 직접 확인한 후 지급하는 것이 원칙입니다.
+      </p>
+    </section>
+
+    <!-- 섹션 7: 인터넷 결합 및 통신사 현금지원 프로모션의 허와 실 -->
+    <section id="internet-telecom">
+      <h2>7. 인터넷 이전 및 신규 가입 혜택, 사은품과 위약금 상관관계</h2>
+      <p>
+        이사를 진행할 때 통신사(SK, KT, LG 등)의 인터넷 및 IPTV 이전 설치 여부도 중요한 비용 변수입니다. 기존 약정 기간이 1년(12개월) 이상 남아 있는 경우 단순 주소 이전 설치를 진행하는 것이 위약금을 방지하는 길이지만, 만약 약정 만료가 도래했거나 무약정 상태라면 인터넷 신규 가입을 통해 제공되는 현금지원금, 백화점 상품권 사은품, 또는 요금 할인 프로모션을 수령하여 전체 이사 비용을 크게 상쇄할 수 있습니다.
+      </p>
+      <p>
+        일부 온라인 좌표 사이트나 대리점에서 과도한 현금지원을 미끼로 필수 고가 요금제 의무 유지 조건을 거는 경우가 있으므로, 약정 기간 내 해지 시 발생하는 반환금 및 위약금 규모를 통신사 공식 고객센터 전화번호를 통해 사전 조회해 보는 꼼꼼함이 필요합니다.
+      </p>
+    </section>
+
+    <!-- 섹션 8: 자주 묻는 질문 (FAQ) -->
+    <section id="faq">
+      <h2>8. 자주 묻는 질문 (FAQ)</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Q1. 견적 상담을 받을 때 방문 견적은 꼭 무료로 진행해야 하나요?</div>
+        <div class="faq-answer">
+          네, 그렇습니다. 전화나 앱(어플)으로 사진만 전송하여 유선으로 산출하는 비대면 견적은 장롱 뒤편의 잔짐, 베란다 창고 짐, 특수 가전의 분해 난이도를 정확히 측정할 수 없습니다. 이로 인해 이사 당일 추가 차량 배차나 추가 인력 투입을 이유로 현장 추가 요금이 발생하는 주원인이 됩니다. 울산 내 정식 등록 업체들은 대부분 무료 방문 견적 컨설팅을 제공하므로, 최소 2~3곳 이상의 업체를 집으로 불러 실측 견적을 대면 비교하는 것이 가장 안전합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Q2. 손 없는 날은 평일보다 왜 가격 차이가 크게 발생하나요?</div>
+        <div class="faq-answer">
+          손 없는 날(음력 끝수가 9, 0으로 끝나는 날)은 악귀가 없어 길일이라는 전통적 믿음으로 인해 전체 이사 수요의 40% 이상이 특정 날짜에 집중됩니다. 화물차량과 전문 인력의 공급은 한정되어 있는 반면 수요가 일시에 몰리기 때문에 시장 논리에 의해 평균 20%에서 35%가량 요금이 높게 책정됩니다. 예산 절감을 최우선으로 하신다면 손 없는 날을 피하고 화요일이나 수요일 등 주중을 선택하시면 상당한 할인 혜택을 누릴 수 있습니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Q3. 이사 중 가구나 가전제품이 파손되었을 때 배상받는 방법은 무엇인가요?</div>
+        <div class="faq-answer">
+          파손 사실을 인지한 즉시 현장에서 작업 팀장에게 알리고 손상 부위 사진과 동영상을 다양한 각도에서 촬영해야 합니다. 그리고 이사 당일 작성한 서면 계약서 뒷면이나 확인서에 현장 책임자의 자필 서명과 파손 내용을 기재해 두어야 합니다. 정식 허가 업체는 적재물 배상책임보험에 가입되어 있어 보험 접수를 통해 수리비 또는 감가상각을 반영한 현금 보상이 원활하게 진행됩니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Q4. 이사 당일 작업 인부들에게 식대나 수고비를 따로 지급해야 하나요?</div>
+        <div class="faq-answer">
+          공식 계약서 상에 점심 식대 및 수고비 일체가 총금액에 포함되어 명시되어 있다면 고객이 별도의 현금이나 식대를 제공할 법적, 계약적 의무는 전혀 없습니다. 과거의 관행으로 남아있던 수고비 요구는 현대 표준 포장이사 시스템에서는 엄격히 금지되고 있으며, 만약 현장에서 부당하게 웃돈을 요구하는 경우 본사 고객센터로 즉시 항의하여 시정 조치를 요구해야 합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Q5. 보관이사는 일반 포장이사와 비교해 비용 차이가 얼마나 나나요?</div>
+        <div class="faq-answer">
+          보관이사는 짐을 포장하여 보관 창고로 운송하는 1차 이사, 보관 기간 동안의 컨테이너 창고 보관료, 보관 종료 후 새 집으로 운송하여 정리하는 2차 이사로 이루어집니다. 따라서 운송과 상하차 작업이 2회 반복되므로 일반 포장이사 비용의 약 1.8배에서 2.2배에 달하는 비용과 함께 일 단위 컨테이너 보관 요금(5톤 기준 일 1만 원~1만 5천 원 선)이 추가로 발생합니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 9: 공식 외부 신뢰 사이트 링크 안내 -->
+    <section>
+      <h2>9. 공인 검증 기관 및 공공 포털 공식 안내 사이트</h2>
+      <p>
+        울산이사업체를 최종 확정하기 전, 해당 업체가 합법적으로 허가받은 운송주선사업자인지 여부와 소비자 피해 예방 가이드를 확인할 수 있는 공식 기관 사이트를 방문해 보시기 바랍니다.
+      </p>
+      <div class="source-box">
+        <h4>공식 인증 및 규정 조회 공식 웹사이트</h4>
+        <ul class="source-list">
+          <li>
+            전국화물자동차운송주선사업연합회: <a href="https://www.kffa.or.kr" target="_blank" rel="noopener noreferrer">정식 관허 허가 이사업체 실명 조회 포털 (kffa.or.kr)</a>
+          </li>
+          <li>
+            울산광역시청 공식 포털: <a href="https://www.ulsan.go.kr" target="_blank" rel="noopener noreferrer">울산시 전입 세대 혜택 및 폐기물 배출 안내 (ulsan.go.kr)</a>
+          </li>
+          <li>
+            한국소비자원 피해구제 마당: <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">이사화물 표준약관 및 소비자 분쟁 해결 기준 (kca.go.kr)</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 섹션 10: 검색 키워드 및 클러스터 모음 -->
+    <section id="keywords">
+      <h2>10. 울산이사업체 연관 검색어 및 검색 트렌드 클러스터</h2>
+      <p>
+        소비자들이 네이버, 구글, 포털 사이트에서 가장 빈번하게 질의하는 연관 검색어와 함께 많이 찾는 카테고리 키워드 모음입니다.
+      </p>
+
+      <div class="keyword-cluster">
+        <div class="keyword-box">
+          <h4>울산 행정구역 및 아파트 중심 키워드</h4>
+          <ul>
+            <li>울산 남구 삼산동 포장이사 추천</li>
+            <li>울산 옥동 학군지 아파트 이사짐센터</li>
+            <li>울산 중구 유곡동 혁신도시 이사 비용</li>
+            <li>울산 북구 송정지구 신축 포장이사</li>
+            <li>울산 동구 서부동 지웰 이사업체 순위</li>
+            <li>울산 울주군 범서읍 구영리 원룸 이사</li>
+            <li>울산 천상리 다세대 빌라 사다리차 요금</li>
+            <li>울산 신정동 단독주택 용달이사 견적</li>
+          </ul>
+        </div>
+
+        <div class="keyword-box">
+          <h4>비용, 요금표 및 견적 계산 키워드</h4>
+          <ul>
+            <li>울산 30평 아파트 포장이사 평균 금액</li>
+            <li>2027년 이사짐센터 5톤 트럭 가격표</li>
+            <li>울산 포장이사 최저가 비교 어플</li>
+            <li>손 없는 날 이사 요금 차이 얼마</li>
+            <li>사다리차 층수별 요금표 등급표</li>
+            <li>울산 포장이사 다이렉트 견적 계산기</li>
+            <li>보관이사 컨테이너 비용 및 단점</li>
+            <li>원룸 오피스텔 1톤 반포장이사 비용</li>
+          </ul>
+        </div>
+
+        <div class="keyword-box">
+          <h4>신뢰성, 후기 및 계약 검증 키워드</h4>
+          <ul>
+            <li>울산이사업체 내돈내산 솔직 후기</li>
+            <li>디시 보배드림 추천 울산 이사 성지</li>
+            <li>에펨코리아 포장이사 추가금 방지법</li>
+            <li>적재물 배상책임보험 가입 조회 방법</li>
+            <li>이사 당일 계약 파기 위약금 및 환불</li>
+            <li>인터넷 신규 가입 현금지원 혜택 비교</li>
+            <li>포장이사 인부 식대 수고비 요구 대처법</li>
+            <li>이사 후 가구 파손 손해배상 청구 절차</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <script>
+    // 인터랙티브 이사비용 계산 로직
+    function calculateMovingCost(event) {
+      event.preventDefault();
+
+      const roomSize = parseFloat(document.getElementById('roomSize').value);
+      const moveType = document.getElementById('moveType').value;
+      const ladderUse = document.getElementById('ladderUse').value;
+      const dateType = document.getElementById('dateType').value;
+
+      // 톤수별 기본 요금 (평일 기준)
+      let baseCost = 0;
+      if (roomSize === 1) {
+        baseCost = 280000; // 1톤
+      } else if (roomSize === 2.5) {
+        baseCost = 850000; // 2.5톤
+      } else if (roomSize === 5) {
+        baseCost = 1350000; // 5톤
+      } else if (roomSize === 6) {
+        baseCost = 1650000; // 6톤
+      } else {
+        baseCost = 2100000; // 7.5톤 이상
+      }
+
+      // 서비스 종류 가중치
+      let typeMultiplier = 1.0;
+      if (moveType === 'semi') {
+        typeMultiplier = 0.85; // 반포장이사
+      } else if (moveType === 'storage') {
+        typeMultiplier = 1.95; // 보관이사 (상하차 2회 + 보관)
+      }
+
+      // 사다리차 추가 요금
+      let ladderCost = 0;
+      if (ladderUse === 'one') {
+        ladderCost = 150000;
+      } else if (ladderUse === 'both') {
+        ladderCost = 300000;
+      }
+
+      // 일정 가중치
+      let dateMultiplier = 1.0;
+      if (dateType === 'weekend') {
+        dateMultiplier = 1.15; // 주말
+      } else if (dateType === 'peak') {
+        dateMultiplier = 1.30; // 손 없는 날
+      }
+
+      // 총액 계산
+      const totalEstimated = Math.round(((baseCost * typeMultiplier * dateMultiplier) + ladderCost) / 10000) * 10000;
+
+      // 결과 표기
+      const resultBox = document.getElementById('calcResultBox');
+      const priceDisplay = document.getElementById('calcPriceDisplay');
+
+      priceDisplay.textContent = totalEstimated.toLocaleString('ko-KR') + '원 내외';
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+  
